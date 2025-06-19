@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Configuration;
 
-namespace Automation.Test.Core.Utilities
+namespace Automation.Core.Utilities
 {
     public class ConfigurationUtils
     {

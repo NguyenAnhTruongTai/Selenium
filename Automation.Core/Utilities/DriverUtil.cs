@@ -1,8 +1,9 @@
 using OpenQA.Selenium;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Model;
-using Automation.Test.Core.WebDriver;
-namespace Automation.Test.Core.Utilities
+using Automation.Core.Drivers;
+using Automation.Core.Utilities;
+namespace Automation.Test.Utilities
 {
     public class DriverUtil
     {

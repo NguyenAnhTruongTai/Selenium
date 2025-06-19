@@ -6,7 +6,7 @@ using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
 using WebDriverManager.Helpers;
 
-namespace Jira011.Core
+namespace Automation.Core.Drivers
 {
     public class BrowserFactory
     {

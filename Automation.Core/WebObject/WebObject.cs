@@ -1,6 +1,6 @@
 using OpenQA.Selenium;
 
-namespace Jira011.Core
+namespace Automation.Core.WebObject
 {
     public class WebObject
     {

@@ -1,6 +1,8 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
-using Automation.Test.Core.WebDriver;
+using Automation.Core.Utilities;
+using Automation.Core.Drivers;
+using Automation.Test.Utilities;
 namespace Automation.Test.Core.Utilities
 {
     public class ExtentReportHelpers
