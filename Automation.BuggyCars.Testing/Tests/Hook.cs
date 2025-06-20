@@ -1,5 +1,4 @@
 using Automation.Core.Utilities;
-using Automation.Test.Core.Utilities;
 
 namespace Automation.BuggyCars.Testing.Tests
 {
@@ -12,7 +11,7 @@ namespace Automation.BuggyCars.Testing.Tests
 
         public void OneTimeSetUp()
         {
-            TestContext.Progress.WriteLine("=========> Golbal OneTimeSetup");
+            TestContext.Progress.WriteLine("=========> Global OneTimeSetup");
             ConfigurationUtils.ReadConfiguration("appsettings.json");
 
             var basePath = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory)!.Parent!.Parent!.Parent!.FullName;
@@ -23,7 +22,7 @@ namespace Automation.BuggyCars.Testing.Tests
         [OneTimeTearDown]
         public void OneTimeTearDown()
         {
-            TestContext.Progress.WriteLine("=========> Golbal OneTimeTearDown");
+            TestContext.Progress.WriteLine("=========> Global OneTimeTearDown");
             ExtentReportHelpers.Flush();
         }
     }

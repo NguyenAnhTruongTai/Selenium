@@ -1,9 +1,6 @@
 using System.Diagnostics;
 using Automation.Core.Drivers;
 using Automation.Core.Utilities;
-using Automation.Test.Core.Utilities;
-using Automation.Test.Utilities;
-using NUnit.Framework.Interfaces;
 
 namespace Automation.BuggyCars.Testing.Tests
 {
@@ -37,15 +34,23 @@ namespace Automation.BuggyCars.Testing.Tests
             try
             {
                 var result = TestContext.CurrentContext.Result;
-                var status = result.Outcome.Status switch
+                var status = result.Outcome.Status;
+
+                var extentStatus = status switch
                 {
-                    TestStatus.Passed => TestStatus.Passed,
-                    TestStatus.Failed => TestStatus.Failed,
-                    TestStatus.Skipped => TestStatus.Skipped,
-                    TestStatus.Inconclusive => TestStatus.Inconclusive,
+                    NUnit.Framework.Interfaces.TestStatus.Passed => ExtentReportHelpers.ExtentTestStatus.Passed,
+                    NUnit.Framework.Interfaces.TestStatus.Failed => ExtentReportHelpers.ExtentTestStatus.Failed,
+                    NUnit.Framework.Interfaces.TestStatus.Skipped => ExtentReportHelpers.ExtentTestStatus.Skipped,
+                    NUnit.Framework.Interfaces.TestStatus.Inconclusive => ExtentReportHelpers.ExtentTestStatus.Inconclusive,
+                    _ => ExtentReportHelpers.ExtentTestStatus.Inconclusive
                 };
 
-                ExtentReportHelpers.CreateTestResult((ExtentReportHelpers.TestStatus)status, result.Message + "\n" + result.StackTrace, TestContext.CurrentContext.Test.Name);
+                ExtentReportHelpers.CreateTestResult(
+                    extentStatus,
+                    result.Message + "\n" + result.StackTrace,
+                    TestContext.CurrentContext.Test.Name
+                );
+
 
                 if (BrowserFactory.GetWebDriver() != null)
                 {

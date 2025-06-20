@@ -5,7 +5,7 @@ namespace Automation.BuggyCars.Testing.Provider.ManageAccount
 {
     public class LoginProvider
     {
-        public static IEnumerable<TestCaseData> GetLoginData()
+        public static IEnumerable<TestCaseData> GetLoginWithValidData()
         {
             var testData = JsonUtils.GetJsonData("ManageAccount", "LoginData.json", "loginWithValidData") as IEnumerable<Dictionary<string, string>>;
 
@@ -15,10 +15,12 @@ namespace Automation.BuggyCars.Testing.Provider.ManageAccount
                 {
                     login = result.ContainsKey("Login") ? result["Login"]! : throw new KeyNotFoundException("Login not found."),
                     password = result.ContainsKey("Password") ? result["Password"]! : throw new KeyNotFoundException("Password not found."),
+                    firstName = result.ContainsKey("FirstName") ? result["FirstName"]! : throw new KeyNotFoundException("FirstName not found.")
+
                 };
 
                 yield return new TestCaseData(dto)
-                             .SetName($"Login - Invalid: {dto.login ?? "(empty)"}");
+                             .SetName($"Login - Valid: {dto.login ?? "(empty)"}");
             }
         }
     }

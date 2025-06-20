@@ -2,7 +2,8 @@
   "loginWithValidData": [
     {
       "Login": "tainguyenanhtruong",
-      "Password": "Tainat###2512"
+      "Password": "Tainat###2512",
+      "FirstName": "tai"
     }
   ]
 }
