@@ -9,16 +9,19 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         private WebObject _loginInput = new WebObject(By.Name("login"), "Login Input");
         private WebObject _passwordInput = new WebObject(By.Name("password"), "Password Input");
         private WebObject _loginButton = new WebObject(By.XPath("//button[text()='Login']"), "Login Button");
+        private WebObject _profileButton = new WebObject(By.LinkText("Profile"), "Profile Button");
+        private WebObject _logoutButton = new WebObject(By.LinkText("Logout"), "Logout Button");
 
         public WebObject LoginInput => _loginInput;
         public WebObject PasswordInput => _passwordInput;
         public WebObject LoginButton => _loginButton;
+        public WebObject ProfileButton => _profileButton;
+        public WebObject LogoutButton => _logoutButton;
 
         public LoginPage() { }
 
         public void FillLoginForm(LoginModel login)
         {
-
             _loginInput.EnterText(login.login);
             _passwordInput.EnterText(login.password);
             _loginButton.ClickOnElement();
