@@ -5,7 +5,7 @@ using Automation.Test.Core.Utilities;
 using Automation.Test.Utilities;
 using NUnit.Framework.Interfaces;
 
-namespace AssetAssignment_java01_test.Tests
+namespace Automation.BuggyCars.Testing.Tests
 {
     public class BaseTest
     {
