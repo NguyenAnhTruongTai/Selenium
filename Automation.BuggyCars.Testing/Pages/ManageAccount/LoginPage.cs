@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using Automation.BuggyCars.Testing.Models.ManageAccount;
 using Automation.Core.WebObject;
+
 namespace Automation.BuggyCars.Testing.Pages.ManageAccount
 {
     public class LoginPage : BasePage
@@ -22,6 +23,5 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
             _passwordInput.EnterText(login.password);
             _loginButton.ClickOnElement();
         }
-
     }
 }
