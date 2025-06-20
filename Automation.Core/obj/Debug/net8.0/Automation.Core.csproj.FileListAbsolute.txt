@@ -1,0 +1,16 @@
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\selenium-manager\linux\selenium-manager
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\selenium-manager\macos\selenium-manager
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\selenium-manager\windows\selenium-manager.exe
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\Automation.Core.deps.json
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\Automation.Core.dll
+D:\DATN\code\BuggyCars\Automation.Core\bin\Debug\net8.0\Automation.Core.pdb
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.csproj.AssemblyReference.cache
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.AssemblyInfoInputs.cache
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.AssemblyInfo.cs
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.csproj.CoreCompileInputs.cache
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.sourcelink.json
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.dll
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\refint\Automation.Core.dll
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\Automation.Core.pdb
+D:\DATN\code\BuggyCars\Automation.Core\obj\Debug\net8.0\ref\Automation.Core.dll

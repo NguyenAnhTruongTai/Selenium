@@ -2,8 +2,7 @@ using OpenQA.Selenium;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Model;
 using Automation.Core.Drivers;
-using Automation.Core.Utilities;
-namespace Automation.Test.Utilities
+namespace Automation.Core.Utilities
 {
     public class DriverUtil
     {
@@ -11,6 +10,7 @@ namespace Automation.Test.Utilities
         {
             BrowserFactory.GetWebDriver().Navigate().GoToUrl(url);
         }
+
 
         public static void MaximizeWindow()
         {

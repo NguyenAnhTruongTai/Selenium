@@ -1,9 +1,9 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace Automation.Test.Core.Utilities
+namespace Automation.Core.Utils
 {
-    public static class JsonUtil
+    public class JsonUtils
     {
         public static IEnumerable<IDictionary<string, string>> GetJsonDataArray(string subFolder, string fileName)
         {
@@ -46,6 +46,8 @@ namespace Automation.Test.Core.Utilities
 
             throw new KeyNotFoundException($"Cannot find key '{caseKey}' in JSON file.");
         }
+
+
 
     }
 }

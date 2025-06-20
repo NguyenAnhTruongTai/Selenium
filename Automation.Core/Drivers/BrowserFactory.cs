@@ -10,42 +10,37 @@ namespace Automation.Core.Drivers
 {
     public class BrowserFactory
     {
-        public static ThreadLocal<IWebDriver> _threadLocalWebDriver = new ThreadLocal<IWebDriver>();
-        public static void InitializeDriver(string browserName)
+        public static ThreadLocal<IWebDriver?> _threadLocalWebDriver = new ThreadLocal<IWebDriver?>();
+        public static void CreateBrowser(string browserName)
         {
             switch (browserName)
             {
                 case "chrome":
                     new DriverManager().SetUpDriver(new ChromeConfig(), VersionResolveStrategy.MatchingBrowser);
                     var chromeOptions = new ChromeOptions();
-                    chromeOptions.AddArguments("test-type");
-                    chromeOptions.AddArguments("--no-sandbox");
-
+                    chromeOptions.AddArguments("test-type", "--no-sandbox");
                     _threadLocalWebDriver.Value = new ChromeDriver(chromeOptions);
                     break;
 
                 case "firefox":
                     new DriverManager().SetUpDriver(new FirefoxConfig(), VersionResolveStrategy.MatchingBrowser);
                     var firefoxOptions = new FirefoxOptions();
-                    firefoxOptions.AddArguments("test-type");
-                    firefoxOptions.AddArguments("--no-sandbox");
-
+                    firefoxOptions.AddArguments("test-type", "--no-sandbox");
                     _threadLocalWebDriver.Value = new FirefoxDriver(firefoxOptions);
                     break;
 
                 case "edge":
-                    new DriverManager().SetUpDriver(new FirefoxConfig(), VersionResolveStrategy.MatchingBrowser);
+                    new DriverManager().SetUpDriver(new EdgeConfig(), VersionResolveStrategy.MatchingBrowser);
                     var edgeOptions = new EdgeOptions();
-                    edgeOptions.AddArguments("test-type");
-                    edgeOptions.AddArguments("--no-sandbox");
-
+                    edgeOptions.AddArguments("test-type", "--no-sandbox");
                     _threadLocalWebDriver.Value = new EdgeDriver(edgeOptions);
                     break;
 
                 default:
-                    throw new ArgumentException($"Browser '{browserName}' is not supported. Please use 'chrome', 'firefox', or 'edge'.");
+                    throw new ArgumentException($"Browser '{browserName}' is not supported.");
             }
         }
+
 
         public static IWebDriver GetWebDriver()
         {
@@ -58,8 +53,12 @@ namespace Automation.Core.Drivers
 
         public static void CleanUpWebDriver()
         {
-            _threadLocalWebDriver.Value.Quit();
-            _threadLocalWebDriver.Value.Dispose();
+            if (_threadLocalWebDriver.Value != null)
+            {
+                _threadLocalWebDriver.Value.Quit();
+                _threadLocalWebDriver.Value.Dispose();
+                _threadLocalWebDriver.Value = null;
+            }
         }
     }
 }
