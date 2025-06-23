@@ -14,7 +14,7 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         private WebObject _confirmPasswordInput = new WebObject(By.Name("confirmPassword"), "Confirm Password Input");
         private WebObject _registrationSuccessText = new WebObject(By.XPath("//div[contains(text(), 'Registration is successful')]"), "Registration Success Text");
         private WebObject _registerButtonOfRegisterPage = new WebObject(By.XPath("//button[text()='Register']"), "Register Button");
-
+        private WebObject _cancelButton = new WebObject(By.XPath("//a[contains(text(), 'Cancel')]"), "Cancel Button");
         public WebObject LoginInput => _loginInput;
         public WebObject FirstNameInput => _firstNameInput;
         public WebObject LastNameInput => _lastNameInput;
@@ -23,6 +23,7 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         public WebObject RegisterButton => _registerButton;
         public WebObject RegistrationSuccessText => _registrationSuccessText;
         public WebObject RegisterButtonOfRegisterPage => _registerButtonOfRegisterPage;
+        public WebObject CancelButton => _cancelButton;
 
         public RegisterPage() { }
 
@@ -43,6 +44,11 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         public void ClickOnRegisterButton()
         {
             _registerButtonOfRegisterPage.ClickOnElement();
+        }
+
+        public void ClickOnCancelButton()
+        {
+            _cancelButton.ClickOnElement();
         }
     }
 }
