@@ -28,11 +28,12 @@ namespace Automation.BuggyCars.Testing.Tests.ManageAccount
             {
                 Assertions.ManageAccount.LoginAssertions.AssertLoginFormElementsVisible(_loginPage);
                 ExtentReportHelpers.LogTestStep("Login form elements are visible", Status.Pass);
+
                 _loginPage.FillLoginForm(login);
                 ExtentReportHelpers.LogTestStep("Login with valid credentials", Status.Pass);
 
-                ExtentReportHelpers.LogTestStep("Verify login success message", Status.Pass);
                 Assertions.ManageAccount.LoginAssertions.AssertUserLoggedInSuccessfully(_loginPage, login);
+                ExtentReportHelpers.LogTestStep("Verify login success message", Status.Pass);
 
                 ExtentReportHelpers.LogTestStep("Login successful", Status.Pass);
             }
