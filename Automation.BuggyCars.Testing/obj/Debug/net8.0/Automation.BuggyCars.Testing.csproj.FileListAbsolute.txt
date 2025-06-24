@@ -164,3 +164,4 @@ D:\DATN\code\BuggyCars\Automation.BuggyCars.Testing\obj\Debug\net8.0\refint\Auto
 D:\DATN\code\BuggyCars\Automation.BuggyCars.Testing\obj\Debug\net8.0\Automation.BuggyCars.Testing.pdb
 D:\DATN\code\BuggyCars\Automation.BuggyCars.Testing\obj\Debug\net8.0\Automation.BuggyCars.Testing.genruntimeconfig.cache
 D:\DATN\code\BuggyCars\Automation.BuggyCars.Testing\obj\Debug\net8.0\ref\Automation.BuggyCars.Testing.dll
+D:\DATN\code\BuggyCars\Automation.BuggyCars.Testing\bin\Debug\net8.0\TestData\ManageAccount\RegisterData.json

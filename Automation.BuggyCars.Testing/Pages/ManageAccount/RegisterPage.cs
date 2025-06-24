@@ -7,10 +7,10 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
     public class RegisterPage : BasePage
     {
         private WebObject _registerButton = new WebObject(By.XPath("//a[text()='Register']"), "Navigate to Register Page Button");
-        private WebObject _loginInput = new WebObject(By.Name("login"), "Login Input");
+        private WebObject _loginInput = new WebObject(By.Id("username"), "Login Input");
         private WebObject _firstNameInput = new WebObject(By.Name("firstName"), "First Name Input");
         private WebObject _lastNameInput = new WebObject(By.Name("lastName"), "Last Name Input");
-        private WebObject _passwordInput = new WebObject(By.Name("password"), "Password Input");
+        private WebObject _passwordInput = new WebObject(By.Id("password"), "Password Input");
         private WebObject _confirmPasswordInput = new WebObject(By.Name("confirmPassword"), "Confirm Password Input");
         private WebObject _registrationSuccessText = new WebObject(By.XPath("//div[contains(text(), 'Registration is successful')]"), "Registration Success Text");
         private WebObject _registerButtonOfRegisterPage = new WebObject(By.XPath("//button[text()='Register']"), "Register Button");
