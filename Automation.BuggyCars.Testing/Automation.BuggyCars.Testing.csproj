@@ -38,6 +38,12 @@
     <None Update="Tests\ManageAccount\*.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Tests\ManageRating\*.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+      <None Update="TestData\ManageRating\*.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
