@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Automation.BuggyCars.Testing")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dd9322eed314c2d851f8b9bf0a089128a98fc8fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03427abfc9b693f39facad31994e832c4ea5b933")]
 [assembly: System.Reflection.AssemblyProductAttribute("Automation.BuggyCars.Testing")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Automation.BuggyCars.Testing")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

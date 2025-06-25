@@ -25,7 +25,7 @@ namespace Automation.BuggyCars.Testing.Tests
         }
 
         [Test, TestCaseSource(typeof(ChangePasswordProvider), nameof(ChangePasswordProvider.ChangePasswordThenLoginAgain))]
-        public void TestChangePasswordSuccessfully(LoginModel login, ChangePasswordModel changePassword, LoginModel loginAfterChangePassword)
+        public void TestChangePasswordSuccessfully(LoginModel login, ChangePasswordModel changePassword)
         {
             ExtentReportHelpers.CreateTest("Test Change Password Successfully");
             ExtentReportHelpers.CreateNode("Execute Test Steps");
