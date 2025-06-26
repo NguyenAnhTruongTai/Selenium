@@ -3,7 +3,7 @@ using Automation.Core.WebObject;
 
 namespace Automation.BuggyCars.Testing.Extensions
 {
-    public static class WebObjectTestExtensions
+    public static class WebObjectBuggyCarTestExtensions
     {
         public static void SelectDropdownByText(this WebObject webObject, string text)
         {
