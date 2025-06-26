@@ -35,6 +35,10 @@ namespace Automation.Core.WebObject
             });
         }
 
+        public static void ClearText(this WebObject webObject)
+        {
+            WaitForElementtoBeVisible(webObject).Clear();
+        }
         public static bool IsElementDisplayed(this WebObject webObject)
         {
             var Wait = new WebDriverWait(BrowserFactory.GetWebDriver(), TimeSpan.FromSeconds(timeout));
