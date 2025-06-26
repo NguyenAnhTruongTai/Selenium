@@ -65,7 +65,7 @@ public class RatingPage : BasePage
                     var classAttr = nextBtn.GetAttribute("class");
 
                     if (classAttr != null && classAttr.Contains("disabled"))
-                        throw new Exception($"Không tìm thấy model '{_ratingModel.model}' sau khi duyệt hết trang.");
+                        throw new Exception($"No model is found: '{_ratingModel.model}'.");
 
                     nextButtonWebObj.ClickOnElement();
 
@@ -79,11 +79,11 @@ public class RatingPage : BasePage
                     });
 
                     if (!isModelVisible)
-                        throw new Exception($"Không tìm thấy model '{_ratingModel.model}' sau khi sang trang mới.");
+                        throw new Exception($"No model is found '{_ratingModel.model}' when on new page.");
                 }
                 catch (WebDriverTimeoutException)
                 {
-                    throw new Exception("Không thể click nút Next hoặc trang không load đúng.");
+                    throw new Exception("Cannot click Next button or page did not load correctly.");
                 }
             }
         }

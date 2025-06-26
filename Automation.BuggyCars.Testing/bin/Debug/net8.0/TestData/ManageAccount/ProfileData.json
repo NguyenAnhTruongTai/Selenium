@@ -1,0 +1,13 @@
+{
+  "EditProfileWithAllData": [
+    {
+      "FirstName": "Taiiii",
+      "LastName": "Nguyennn",
+      "Gender": "Male",
+      "Age": "23",
+      "Address": "123 Street, City, Country",
+      "Phone": "1234567890",
+      "Hobby": "Biking"
+    }
+  ]
+}
