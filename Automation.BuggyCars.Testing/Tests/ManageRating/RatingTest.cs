@@ -1,3 +1,4 @@
+using Automation.BuggyCars.Testing.Assertions.ManageRating;
 using Automation.BuggyCars.Testing.Models.ManageAccount;
 using Automation.BuggyCars.Testing.Models.ManageRating;
 using Automation.BuggyCars.Testing.Pages.ManageAccount;
@@ -46,10 +47,12 @@ namespace Automation.BuggyCars.Testing.Tests.ManageRating
                 ExtentReportHelpers.LogTestStep("Clicked on Overall Rating Image", Status.Pass);
                 _ratingPage.ClickOnModel();
                 ExtentReportHelpers.LogTestStep("Clicked on Model", Status.Pass);
+                RatingAssertions.AssertRatingFormElementsVisible(_ratingPage);
                 _ratingPage.FillComment();
                 ExtentReportHelpers.LogTestStep("Filled Comment", Status.Pass);
                 _ratingPage.ClickOnVoteButton();
                 ExtentReportHelpers.LogTestStep("Clicked on Vote Button", Status.Pass);
+                RatingAssertions.AssertRatingSuccess(_ratingPage);
             }
             catch (Exception ex)
             {

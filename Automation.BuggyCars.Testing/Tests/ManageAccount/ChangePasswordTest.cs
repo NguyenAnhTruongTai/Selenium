@@ -1,5 +1,6 @@
 
 
+using Automation.BuggyCars.Testing.Assertions.ManageAccount;
 using Automation.BuggyCars.Testing.Models.ManageAccount;
 using Automation.BuggyCars.Testing.Pages.ManageAccount;
 using Automation.BuggyCars.Testing.Provider.ManageAccount;
@@ -33,15 +34,21 @@ namespace Automation.BuggyCars.Testing.Tests
             {
                 _loginPage.FillLoginForm(login);
                 ExtentReportHelpers.LogTestStep("Login with valid credentials", Status.Pass);
+                LoginAssertions.AssertUserLoggedInSuccessfully(_loginPage, login);
 
                 _changePasswordPage.NavigateToProfilePage();
                 ExtentReportHelpers.LogTestStep("Navigate to Change Password screen", Status.Pass);
+                ChangePasswordAssertions.AssertChangePasswordFormElementsVisible(_changePasswordPage);
 
                 _changePasswordPage.FillChangePasswordForm(changePassword);
                 ExtentReportHelpers.LogTestStep("Fill Change Password Form", Status.Pass);
 
                 _changePasswordPage.ClickOnSaveButton();
                 ExtentReportHelpers.LogTestStep("Click on Save button", Status.Pass);
+
+                ChangePasswordAssertions.AssertChangePasswordSuccess(_changePasswordPage, changePassword);
+                ExtentReportHelpers.LogTestStep("Change Password Success", Status.Pass);
+
             }
             catch (Exception ex)
             {

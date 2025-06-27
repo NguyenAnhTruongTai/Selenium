@@ -1,5 +1,6 @@
 
 
+using Automation.BuggyCars.Testing.Assertions.ManageAccount;
 using Automation.BuggyCars.Testing.Models.ManageAccount;
 using Automation.BuggyCars.Testing.Pages.ManageAccount;
 using Automation.BuggyCars.Testing.Provider.ManageAccount;
@@ -34,12 +35,12 @@ namespace Automation.BuggyCars.Testing.Tests
 
                 _profilePage.NavigateToProfilePage();
                 ExtentReportHelpers.LogTestStep("Navigate to Profile Page", Status.Pass);
-
+                ProfileAssertions.AssertProfileFormElementsVisible(_profilePage);
                 _profilePage.FillProfileFormWithAllFields(profile);
                 ExtentReportHelpers.LogTestStep("Fill Profile Form", Status.Pass);
-                Thread.Sleep(4000); // Wait for the form to be filled
                 _profilePage.ClickOnSaveButton();
                 ExtentReportHelpers.LogTestStep("Click on Save button", Status.Pass);
+                ProfileAssertions.AssertProfileSavedSuccessfully(_profilePage);
             }
             catch (Exception ex)
             {

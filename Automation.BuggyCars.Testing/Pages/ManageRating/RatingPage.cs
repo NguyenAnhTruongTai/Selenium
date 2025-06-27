@@ -15,11 +15,11 @@ public class RatingPage : BasePage
     private WebObject? _model;
     private WebObject _commentInput = new WebObject(By.Id("comment"), "Comment Input");
     private WebObject _voteButton = new WebObject(By.XPath("//button[text()='Vote!']"), "Vote Button");
-    public WebObject PopularMakeImage => _popularMakeImage;
-    public WebObject OverallRatingImage => _overallRatingImage;
-    public WebObject Model => _model;
+    public WebObject _ratingSuccessMessage = new WebObject(By.XPath("//p[contains(text(), 'Thank you for your vote')]"), "Rating Success Message");
+
     public WebObject CommentInput => _commentInput;
     public WebObject VoteButton => _voteButton;
+    public WebObject RatingSuccessMessage => _ratingSuccessMessage;
 
     public RatingPage(RatingModel model)
     {

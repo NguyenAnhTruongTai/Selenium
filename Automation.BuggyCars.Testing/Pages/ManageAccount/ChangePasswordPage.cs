@@ -12,11 +12,12 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         private WebObject _newPasswordInput = new WebObject(By.Id("newPassword"), "New Password Input");
         private WebObject _confirmNewPasswordInput = new WebObject(By.Id("confirmNewPassword"), "Confirm New Password Input");
         private WebObject _saveButton = new WebObject(By.XPath("//button[text()='Save']"), "Save Button");
-
+        private WebObject _successMessage = new WebObject(By.XPath("//div[contains(text(), 'The profile has been saved successful')]"), "Success Message");
         public WebObject CurrentPasswordInput => _currentPasswordInput;
         public WebObject NewPasswordInput => _newPasswordInput;
         public WebObject ConfirmNewPasswordInput => _confirmNewPasswordInput;
         public WebObject SaveButton => _saveButton;
+        public WebObject SuccessMessage => _successMessage;
 
         public ChangePasswordPage() { }
 

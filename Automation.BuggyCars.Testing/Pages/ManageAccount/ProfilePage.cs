@@ -10,23 +10,24 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
         private WebObject _profileButton = new WebObject(By.XPath("//a[text()='Profile']"), "Navigate to Profile Page Button");
         private WebObject _firstNameInput = new WebObject(By.Id("firstName"), "First Name Input");
         private WebObject _lastNameInput = new WebObject(By.Id("lastName"), "Last Name Input");
-        private WebObject _genderInput = new WebObject(By.Id("gender"), "Gender Input");
+        private WebObject _genderDropdown = new WebObject(By.Id("gender"), "Gender Input");
         private WebObject _ageInput = new WebObject(By.Id("age"), "Age Input");
         private WebObject _addressInput = new WebObject(By.Id("address"), "Address Input");
         private WebObject _phoneInput = new WebObject(By.Id("phone"), "Phone Input");
-        private WebObject _hobbyInput = new WebObject(By.Id("hobby"), "Hobby Input");
+        private WebObject _hobbyDropdown = new WebObject(By.Id("hobby"), "Hobby Input");
         private WebObject _saveButton = new WebObject(By.XPath("//button[text()='Save']"), "Save Button");
+        private WebObject _successMessage = new WebObject(By.XPath("//div[contains(text(), 'The profile has been saved successful')]"), "Success Message");
 
         public WebObject SaveButton => _saveButton;
         public WebObject ProfileButton => _profileButton;
         public WebObject FirstNameInput => _firstNameInput;
         public WebObject LastNameInput => _lastNameInput;
-        public WebObject GenderInput => _genderInput;
+        public WebObject GenderDropdown => _genderDropdown;
         public WebObject AgeInput => _ageInput;
         public WebObject AddressInput => _addressInput;
         public WebObject PhoneInput => _phoneInput;
-        public WebObject HobbyInput => _hobbyInput;
-
+        public WebObject HobbyDropdown => _hobbyDropdown;
+        public WebObject SuccessMessage => _successMessage;
         public ProfilePage() { }
 
         public void NavigateToProfilePage()
@@ -49,8 +50,8 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
 
             if (profile.gender != null)
             {
-                _genderInput.ClearText();
-                _genderInput.PressEnter(profile.gender);
+                _genderDropdown.ClearText();
+                _genderDropdown.PressEnter(profile.gender);
             }
 
             if (profile.age != null)
@@ -73,7 +74,7 @@ namespace Automation.BuggyCars.Testing.Pages.ManageAccount
 
             if (profile.hobby != null)
             {
-                _hobbyInput.SelectDropdownByText(profile.hobby);
+                _hobbyDropdown.SelectDropdownByText(profile.hobby);
             }
 
         }
